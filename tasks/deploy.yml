@@ -1,0 +1,8 @@
+---
+# tasks file for iac-ansible-globodns
+- git:
+        repo: 'https://github.com/globocom/GloboDNS.git'
+        dest: "{{dstfolder}}"
+        when: dep_installed|success
+        register: deploy_sucess
+...

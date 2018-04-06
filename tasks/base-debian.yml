@@ -1,0 +1,27 @@
+---
+# tasks file for iac-ansible-globodns
+- name: Instalando Dependencias
+  when: epel_installed|success
+  register: dep_installed
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+          - git
+          - openssl
+          - openssl-devel
+          - openssh
+          - openssh-server
+          - openssh-clients
+          - rsync
+          - mariadb-server
+          - mariadb-devel 
+          - bind9
+          - bind-chroot
+          - bind9utils
+          - ruby
+          - rubygems
+          - apache2
+          - sudo
+          - gcc
+          - gcc-c++
+          - gnupg2
+...

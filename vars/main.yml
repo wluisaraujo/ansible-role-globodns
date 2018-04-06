@@ -1,0 +1,5 @@
+---
+# vars file for iac-ansible-globodns
+user: globodns
+gidbind: named
+dstfolder: "/var/www/html/{{ user }}"

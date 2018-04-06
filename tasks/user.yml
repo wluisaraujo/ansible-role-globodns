@@ -1,0 +1,10 @@
+---
+# tasks file for iac-ansible-globodns
+- name: Configurando usuário {{ user }}
+  when: deploy_sucess|success
+  user: name={{ sysadmin }} 
+        state=present 
+        shell=/bin/bash 
+        home={{ dstfolder }}
+        groups=globodns,{{ gidbind }}
+...
