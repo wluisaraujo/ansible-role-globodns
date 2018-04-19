@@ -4,20 +4,22 @@
   register: dep_installed
   apt: name={{ item }} update_cache=yes state=latest
   with_items:
-          - git
-          - openssl
-          - openssh-server
-          - openssh-client
-          - rsync
-          - mariadb-server
-          - mariadb-devel 
+          - apache2
           - bind9
           - bind9utils
+          - build-essential
+          - bundler
+          - g++
+          - gcc
+          - git
+          - gnupg2
+          - mariadb-devel 
+          - mariadb-server
+          - openssh-client
+          - openssh-server
+          - openssl
+          - rsync
           - ruby
           - rubygems
-          - apache2
           - sudo
-          - gcc
-          - g++
-          - gnupg2
 ...
