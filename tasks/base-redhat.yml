@@ -9,23 +9,24 @@
   when: epel_installed|success
   register: dep_installed
   with_items:
-          - git
-          - openssl
-          - openssl-devel
-          - openssh
-          - openssh-server
-          - openssh-clients
-          - rsync
-          - mariadb-server
-          - mariadb-devel 
           - bind
           - bind-chroot
           - bind-utils
-          - ruby
-          - rubygems
-          - httpd
-          - sudo
+          - @Development Tools
           - gcc
           - gcc-c++
+          - git
           - gnupg2
+          - mariadb-devel 
+          - mariadb-server
+          - openssh
+          - openssh-client
+          - openssh-server
+          - openssl
+          - openssl-devel
+          - rsync
+          - ruby
+          - rubygems
+          - sudo
+          - @WebServer
 ...
