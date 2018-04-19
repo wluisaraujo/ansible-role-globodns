@@ -1,7 +1,6 @@
 ---
 # tasks file for iac-ansible-globodns
 - name: Instalando Dependencias
-  when: epel_installed|success
   register: dep_installed
   apt: name={{ item }} update_cache=yes state=latest
   with_items:
