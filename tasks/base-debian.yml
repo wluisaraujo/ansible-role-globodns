@@ -6,7 +6,6 @@
   with_items:
           - git
           - openssl
-          - openssl-devel
           - openssh
           - openssh-server
           - openssh-clients
