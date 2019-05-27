@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/wluisaraujo/iac-ansible-globodns.svg?branch=master)](https://travis-ci.org/wluisaraujo/iac-ansible-globodns)
+[![GloboDNS](https://img.shields.io/badge/Ansible%20Galaxy-Globo%20DNS-blue.svg)](https://galaxy.ansible.com/wluisaraujo/iac-ansible-globodns) | [![Build Status](https://travis-ci.org/wluisaraujo/iac-ansible-globodns.svg?branch=master)](https://travis-ci.org/wluisaraujo/iac-ansible-globodns)
+
 ---
 # IaC: with [Ansible](https://www.ansible.com) role to install and configure [GloboDNS](https://github.com/globocom/GloboDNS)
 ------------
