@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: iac-ansible-globodns
   author: w.luis.araujo
   description: Role to install GloboDNS - Web GUI for BIND
   company: LUSAR | wluisaraujo.github.io
