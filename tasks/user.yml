@@ -1,5 +1,5 @@
 ---
-# tasks file for iac-ansible-globodns
+# tasks file for globodns
 - name: Configurando usuário {{ user }}
   when: deploy_sucess|success
   user: name={{ sysadmin }} 

@@ -1,5 +1,5 @@
 ---
-# tasks file for iac-ansible-globodns
+# tasks file for globodns
 - yum:
         name: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
         state: present

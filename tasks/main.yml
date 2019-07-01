@@ -1,5 +1,5 @@
 ---
-# tasks file for iac-ansible-globodns
+# tasks file for globodns
 
 - name:  Instalando Dependencias (OS Base Debian)
   import_tasks: base-debian.yml
