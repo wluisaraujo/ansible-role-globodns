@@ -16,8 +16,12 @@ Requirements
 Installation
 ------------
 
+Installation
+------------
+
 ```console
 vagrant@localhost:~$ ansible-galaxy install wluisaraujo.globodns
+vagrant@localhost:~$ ansible-galaxy install -r wluisaraujo.globodns/requirements.txt
 ```
 
 Role Variables
