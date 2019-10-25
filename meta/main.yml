@@ -27,9 +27,5 @@ galaxy_info:
      - bind
      - webgui
 
-  galaxy_tags:
-    - bind
-    - webgui
-
 dependencies: []
 #    - role: wluisaraujo.named
