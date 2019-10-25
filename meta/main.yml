@@ -28,4 +28,4 @@ galaxy_info:
      - webgui
 
 dependencies: []
-#    - role: wluisaraujo.named
+  #    - role: wluisaraujo.named
