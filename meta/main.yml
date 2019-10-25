@@ -3,7 +3,7 @@ galaxy_info:
   author: w.luis.araujo
   description: "Infrastructure as Code (IaC) with Ansible role for install GloboDNS - Web GUI for BIND"
   company: "LUSAR | wluisaraujo.github.io"
-  license: "license (GPLv3)"
+  license: GPLv3
 
   min_ansible_version: 2.4
 
