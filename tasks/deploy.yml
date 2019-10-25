@@ -4,6 +4,6 @@
   git:
     repo: 'https://github.com/globocom/GloboDNS.git'
     dest: "{{ dstfolder }}"
-  when: dep_installed|success
+  when: dep_installed is success
   register: deploy_sucess
 ...

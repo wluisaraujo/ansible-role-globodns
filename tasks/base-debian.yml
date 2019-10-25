@@ -2,4 +2,7 @@
 # tasks file for globodns
 - name: Instalando Dependencias
   register: dep_installed
-  apt: name={{ globodns_packages }} update_cache=yes state=latest
+  apt:
+    name: "{{ globodns_packages }}"
+    update_cache: yes
+    state: latest
