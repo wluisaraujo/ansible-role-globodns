@@ -1,7 +1,19 @@
 ---
 # tasks file for globodns
+
+- name: create users group
+  group:
+    state: present
+    name: "{{ globodns_user }}"
+
+- name: test if user is in use
+  shell: "users | grep {{ globodns_user }}"
+  register: user_active
+  ignore_errors: yes
+  changed_when: user_active.rc == 0
+
 - name: "Configuring user {{ globodns_user }}"
-  when: deploy_sucess is success
+  when: deploy_sucess is success and user_active.rc != 0
   user:
     state: present
     shell: /bin/bash
