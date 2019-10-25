@@ -1,0 +1,21 @@
+globodns_packages:
+  - bind
+  - bind-chroot
+  - bind-utils
+  - "@Development Tools"
+  - gcc
+  - gcc-c++
+  - git
+  - gnupg2
+  - mariadb-devel
+  - mariadb-server
+  - openssh
+  - openssh-client
+  - openssh-server
+  - openssl
+  - openssl-devel
+  - rsync
+  - ruby
+  - rubygems
+  - sudo
+  - "@WebServer"

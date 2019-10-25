@@ -1,6 +1,16 @@
 ---
 # tasks file for globodns
 
+- name: gather os specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution|lower }}-{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_distribution|lower }}-{{ ansible_distribution_release }}.yml"
+        - "{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}.yml"
+        - "{{ ansible_distribution|lower }}.yml"
+        - "{{ ansible_os_family|lower }}.yml"
+
 - name:  Instalando Dependencias (OS Base Debian)
   import_tasks: base-debian.yml
   when: (ansible_os_family == "Debian")
@@ -16,4 +26,3 @@
 - name: Configurando usuario de Servico
   import_tasks: user.yml
   when: (ansible_system == "Linux")
-...

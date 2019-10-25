@@ -1,0 +1,19 @@
+globodns_packages:
+  - apache2
+  - bind9
+  - bind9utils
+  - build-essential
+  - bundler
+  - g++
+  - gcc
+  - git
+  - gnupg2
+  - libmariadb-dev
+  - mariadb-server
+  - openssh-client
+  - openssh-server
+  - openssl
+  - rsync
+  - ruby
+  - rubygems
+  - sudo
