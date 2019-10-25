@@ -1,5 +1,4 @@
 galaxy_info:
-  role_name: globodns
   author: w.luis.araujo
   description: "Infrastructure as Code (IaC) with Ansible role for install GloboDNS - Web GUI for BIND"
   company: "LUSAR | wluisaraujo.github.io"
@@ -14,7 +13,7 @@ galaxy_info:
   - name: Fedora
     versions:
     - 30
-    - 29	
+    - 29
   - name: Debian
     versions:
     - all
@@ -24,8 +23,9 @@ galaxy_info:
     - xenial
 
   galaxy_tags:
-     - bind
-     - webgui
+  - bind
+  - webgui
 
 dependencies: []
-  #    - role: wluisaraujo.named
+
+# - role: wluisaraujo.named
