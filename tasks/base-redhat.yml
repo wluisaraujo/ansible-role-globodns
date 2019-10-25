@@ -12,12 +12,12 @@
           - bind
           - bind-chroot
           - bind-utils
-          - @Development Tools
+          - "@Development Tools"
           - gcc
           - gcc-c++
           - git
           - gnupg2
-          - mariadb-devel 
+          - mariadb-devel
           - mariadb-server
           - openssh
           - openssh-client
@@ -28,5 +28,5 @@
           - ruby
           - rubygems
           - sudo
-          - @WebServer
+          - "@WebServer"
 ...
