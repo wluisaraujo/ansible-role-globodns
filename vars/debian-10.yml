@@ -17,3 +17,5 @@ globodns_packages:
   - ruby
   - rubygems
   - sudo
+
+globodns_gidbind: bind

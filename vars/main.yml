@@ -1,5 +1,4 @@
 ---
 # vars file for globodns
 globodns_user: globodns
-globodns_gidbind: named
 globodns_dstfolder: "/var/www/html/{{ globodns_user }}"

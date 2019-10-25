@@ -19,3 +19,5 @@ globodns_packages:
   - rubygems
   - sudo
   - "@WebServer"
+
+globodns_gidbind: named
