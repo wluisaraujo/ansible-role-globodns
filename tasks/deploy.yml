@@ -1,6 +1,6 @@
 ---
 # tasks file for globodns
-- name: clone GloboDNS repo
+- name: Clone GloboDNS repo
   git:
     repo: 'https://github.com/globocom/GloboDNS.git'
     dest: "{{ dstfolder }}"

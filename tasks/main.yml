@@ -11,18 +11,18 @@
         - "{{ ansible_distribution|lower }}.yml"
         - "{{ ansible_os_family|lower }}.yml"
 
-- name:  Instalando Dependencias (OS Base Debian)
+- name:  Installing deps OS Base Debian
   import_tasks: base-debian.yml
   when: (ansible_os_family == "Debian")
 
-- name:  Instalando Dependencias (OS Base RedHat)
+- name:  installing deps OS Base RedHat
   import_tasks: base-redhat.yml
   when: (ansible_os_family == "RedHat")
 
-- name: Fazendo Deploy GloboDNS
+- name: deploy GloboDNS
   import_tasks: deploy.yml
   when: (ansible_system == "Linux")
 
-- name: Configurando usuario de Servico
+- name: Service configuration
   import_tasks: user.yml
   when: (ansible_system == "Linux")

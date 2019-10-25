@@ -1,11 +1,10 @@
 ---
 # tasks file for globodns
-- name: "Configurando usuário {{ user }}"
+- name: "Configuring user {{ globodns_user }}"
   when: deploy_sucess is success
   user:
-    name: "{{ sysadmin }}"
     state: present
     shell: /bin/bash
-    nome: "{{ dstfolder }}"
+    name: "{{ globodns_user }}"
     groups: "globodns,{{ gidbind }}"
 ...

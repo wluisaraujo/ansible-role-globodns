@@ -1,6 +1,6 @@
 ---
 # tasks file for globodns
-- name: Instalando Dependencias
+- name: Install deps
   register: dep_installed
   apt:
     name: "{{ globodns_packages }}"
