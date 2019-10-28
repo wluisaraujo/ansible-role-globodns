@@ -9,7 +9,7 @@
 - name: test if user is in use
   shell: "users | grep {{ globodns_user }}"
   register: user_active
-  ignore_errors: yes
+  failed_when: user_active.rc is not defined
   changed_when: user_active.rc == 0
 
 - name: "Configuring user {{ globodns_user }}"
