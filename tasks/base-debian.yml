@@ -1,25 +1,8 @@
 ---
 # tasks file for globodns
-- name: Instalando Dependencias
+- name: Install deps
   register: dep_installed
-  apt: name={{ item }} update_cache=yes state=latest
-  with_items:
-          - apache2
-          - bind9
-          - bind9utils
-          - build-essential
-          - bundler
-          - g++
-          - gcc
-          - git
-          - gnupg2
-          - mariadb-devel 
-          - mariadb-server
-          - openssh-client
-          - openssh-server
-          - openssl
-          - rsync
-          - ruby
-          - rubygems
-          - sudo
-...
+  apt:
+    name: "{{ globodns_packages }}"
+    update_cache: yes
+    state: latest

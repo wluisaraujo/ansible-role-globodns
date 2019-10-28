@@ -1,19 +1,28 @@
 ---
 # tasks file for globodns
 
-- name:  Instalando Dependencias (OS Base Debian)
+- name: gather os specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution|lower }}-{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_distribution|lower }}-{{ ansible_distribution_release }}.yml"
+        - "{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}.yml"
+        - "{{ ansible_distribution|lower }}.yml"
+        - "{{ ansible_os_family|lower }}.yml"
+
+- name:  Installing deps OS Base Debian
   import_tasks: base-debian.yml
   when: (ansible_os_family == "Debian")
 
-- name:  Instalando Dependencias (OS Base RedHat)
+- name:  installing deps OS Base RedHat
   import_tasks: base-redhat.yml
   when: (ansible_os_family == "RedHat")
 
-- name: Fazendo Deploy GloboDNS
+- name: deploy GloboDNS
   import_tasks: deploy.yml
   when: (ansible_system == "Linux")
 
-- name: Configurando usuario de Servico
+- name: Service configuration
   import_tasks: user.yml
   when: (ansible_system == "Linux")
-...

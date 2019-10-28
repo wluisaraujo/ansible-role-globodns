@@ -1,32 +1,14 @@
 ---
 # tasks file for globodns
-- yum:
-        name: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-        state: present
-        register: epel_installed
+- name: install epel
+  yum:
+    name: epel-release
+    state: present
+  register: epel_installed
 
-- yum: name={{ item }} state=latest
-  when: epel_installed|success
+- name: install deps
+  yum:
+    name: "{{ globodns_packages }}"
+    state: latest
+  when: epel_installed is success
   register: dep_installed
-  with_items:
-          - bind
-          - bind-chroot
-          - bind-utils
-          - @Development Tools
-          - gcc
-          - gcc-c++
-          - git
-          - gnupg2
-          - mariadb-devel 
-          - mariadb-server
-          - openssh
-          - openssh-client
-          - openssh-server
-          - openssl
-          - openssl-devel
-          - rsync
-          - ruby
-          - rubygems
-          - sudo
-          - @WebServer
-...
